@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.lab4.databinding.ActivityMainBinding
+import com.example.mad_lab_4.NotesAdapter
 
 class MainActivity : AppCompatActivity() {
 

@@ -3,13 +3,12 @@ package com.example.lab4
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.lab4.databinding.ActivityMainBinding
-import com.example.lab4.databinding.ActivityUpdateBinding
+import com.example.lab4.databinding.ActivityUpdateNoteBinding
 
 
 class UpdateNoteActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityUpdateNoteBinding
     private lateinit var db: NoteDatabaseHeleper
     private var noteId: Int = -1
 
