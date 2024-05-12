@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -45,15 +46,24 @@
         android:id="@+id/updateContentEditText"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:hint="Enter the description"
-        android:gravity="top"
-        android:padding="12dp"
-        android:textSize="18sp"
         android:layout_below="@id/updateTitleEditText"
+        android:layout_marginTop="8dp"
         android:background="@drawable/orange_border"
-        android:layout_marginTop="12dp"
-        android:fontFamily="@font/poppins"/>
+        android:fontFamily="@font/poppins"
+        android:gravity="top"
+        android:hint="Enter the description"
+        android:padding="12dp"
+        android:textSize="18sp" />
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/updateContentEditText"
+        android:layout_alignBottom="@+id/updateContentEditText"
+        android:layout_marginTop="49dp"
+        android:layout_marginBottom="10dp"
+        app:srcCompat="@drawable/note" />
 
 
 </RelativeLayout>
