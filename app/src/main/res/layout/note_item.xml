@@ -35,7 +35,7 @@
                 android:layout_height="24dp"
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="30dp"
-                android:src="@drawable/edit" />
+                android:src="@drawable/pencil" />
 
             <ImageView
                 android:id="@+id/deleteButton"
@@ -43,7 +43,7 @@
                 android:layout_height="24dp"
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="1dp"
-                android:src="@drawable/delete" />
+                android:src="@drawable/bin" />
 
 
         </RelativeLayout>

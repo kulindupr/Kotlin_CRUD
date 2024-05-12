@@ -1,4 +1,4 @@
-package com.example.mad_lab_4
+package com.example.lab4
 
 import android.content.Context
 import android.content.Intent
@@ -7,11 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import com.example.lab4.Note
-import com.example.lab4.NoteDatabaseHeleper
-import com.example.lab4.R
-import com.example.lab4.UpdateNoteActivity
+
 
 class NotesAdapter(private var notes: List<Note>, context: Context) :
     RecyclerView.Adapter<NotesAdapter.NoteViewHolder>() {
@@ -43,7 +41,11 @@ class NotesAdapter(private var notes: List<Note>, context: Context) :
             holder.itemView.context.startActivity(intent)
         }
 
-
+        holder.deleteButton.setOnClickListener{
+            db.deleteNote(note.id)
+            refreshData(db.getAllNotes())
+            Toast.makeText(holder.itemView.context, "Note Deleted", Toast.LENGTH_SHORT).show()
+        }
     }
 
     fun refreshData(newNotes: List<Note>){
