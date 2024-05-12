@@ -7,7 +7,7 @@
     app:cardCornerRadius="8dp"
     app:cardElevation="4dp"
     app:cardUseCompatPadding="true"
-    app:cardBackgroundColor="@color/white_transparent2"
+    app:cardBackgroundColor="@color/white_transparent3"
     >
 
     <LinearLayout
@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="16dp"
-        android:background="@color/white_transparent2"
+        android:background="@color/white_transparent3"
         >
 
         <RelativeLayout
@@ -61,7 +61,7 @@
             android:fontFamily="sans-serif-black"
             android:maxLines="3"
             android:text="Content"
-            android:textColor="@color/white"/>
+            android:textColor="@color/black"/>
     </LinearLayout>
 
 
