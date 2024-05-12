@@ -31,7 +31,7 @@
         android:layout_below="@id/notesHeading"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="16dp"
-        android:background="@color/white_transparent2"
+        android:background="@color/white_transparent3"
         android:queryHint="Search notes..."
         app:iconifiedByDefault="false" />
 

@@ -1,5 +1,6 @@
 package com.example.lab4
 
+import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
@@ -9,7 +10,6 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-
 
 class NotesAdapter(private var notes: List<Note>, context: Context) :
     RecyclerView.Adapter<NotesAdapter.NoteViewHolder>() {
@@ -42,9 +42,16 @@ class NotesAdapter(private var notes: List<Note>, context: Context) :
         }
 
         holder.deleteButton.setOnClickListener{
-            db.deleteNote(note.id)
-            refreshData(db.getAllNotes())
-            Toast.makeText(holder.itemView.context, "Note Deleted", Toast.LENGTH_SHORT).show()
+            val alertDialog = AlertDialog.Builder(holder.itemView.context)
+            alertDialog.setTitle("Confirm Deletion")
+            alertDialog.setMessage("Are you sure you want to delete this note?")
+            alertDialog.setPositiveButton("Yes") { dialog, which ->
+                db.deleteNote(note.id)
+                refreshData(db.getAllNotes())
+                Toast.makeText(holder.itemView.context, "Note Deleted", Toast.LENGTH_SHORT).show()
+            }
+            alertDialog.setNegativeButton("No", null)
+            alertDialog.show()
         }
     }
 
@@ -52,5 +59,4 @@ class NotesAdapter(private var notes: List<Note>, context: Context) :
         notes = newNotes
         notifyDataSetChanged()
     }
-
 }
