@@ -59,6 +59,8 @@
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
+
         android:layout_alignTop="@+id/contendEditText"
         android:layout_alignBottom="@+id/contendEditText"
         android:layout_marginTop="49dp"
