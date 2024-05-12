@@ -1,44 +1,57 @@
-<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!-- Notes Heading -->
     <TextView
         android:id="@+id/notesHeading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/poppins"
         android:text="Notes"
-        android:layout_marginStart="18dp"
         android:textColor="@color/orange"
-        android:textSize="24sp"
-        />
+        android:textSize="24sp" />
 
+    <!-- SearchView -->
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/notesHeading"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:queryHint="Search notes..."
+        app:iconifiedByDefault="false" />
+
+    <!-- RecyclerView -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/noteRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="50dp"
-        android:padding="16dp"
-        />
+        android:layout_below="@id/searchView"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/note_item" />
 
+    <!-- Add Button -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/addButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginBottom="16dp"
+        android:layout_alignParentBottom="true"
         android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
         android:src="@drawable/baseline_add_24"
-        app:tint="@color/white"
         android:backgroundTint="@color/orange"
-        />
+        app:tint="@color/white" />
+
 </RelativeLayout>
